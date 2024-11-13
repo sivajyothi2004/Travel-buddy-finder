@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="chat.css"> 
+    <title>Chat with Traveler</title>
+</head>
+<body>
+    <div class="navbar">
+        <div class="profile-toggle" onclick="toggleProfileMenu()">
+            <img src="profile.jpg" alt="Profile Picture"> 
+            <span>Logged in as Sasha</span> 
+        </div>
+        <div class="profile-menu" id="profileMenu">
+            <a href="#" onclick="logout()">Logout</a>
+        </div>
+    </div>
+
+    <div class="chat-container">
+        <div class="chat-header">
+            <img src="prof-2.avif" alt="Profile Picture"> 
+            <span>Chat with Adam</span> 
+        </div>
+        <div class="chat-messages" id="chatMessages">
+        </div>
+        <div class="message-input">
+            <input type="text" id="messageInput" placeholder="Type your message..." />
+            <button onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+
+    <script>
+        function toggleProfileMenu() {
+            const menu = document.getElementById('profileMenu');
+            menu.classList.toggle('active'); 
+        }
+
+        function logout() {
+            window.location.href = "login.php";
+        }
+
+        function sendMessage() {
+            const input = document.getElementById('messageInput');
+            const messageText = input.value;
+
+            if (messageText.trim() === "") {
+                alert("Please enter a message."); 
+                return; 
+            }
+
+            const chatMessages = document.getElementById('chatMessages');
+
+            const messageElement = document.createElement('div');
+            messageElement.classList.add('message', 'sent');
+            messageElement.innerText = messageText;
+
+            chatMessages.appendChild(messageElement);
+            chatMessages.scrollTop = chatMessages.scrollHeight; 
+
+            input.value = "";
+
+            setTimeout(() => {
+                const responseElement = document.createElement('div');
+                responseElement.classList.add('message', 'received');
+                responseElement.innerText = "Hi"; 
+                chatMessages.appendChild(responseElement);
+                chatMessages.scrollTop = chatMessages.scrollHeight; 
+            }, 1000);
+        }
+
+        window.onclick = function(event) {
+            const menu = document.getElementById('profileMenu');
+            if (!event.target.matches('.profile-toggle') && !event.target.matches('.profile-toggle *')) {
+                menu.classList.remove('active');
+            }
+        }
+    </script>
+</body>
+</html>

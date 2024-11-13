@@ -1,0 +1,132 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-image: url('prof-back.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; 
+    height: 100vh;
+    margin: 0;
+}
+
+.tot-parent {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.4); 
+    position: absolute; 
+    top: 0;
+    left: 0;
+    width: 100%; 
+    height: 100%;
+    z-index: 1; 
+    margin: 0;
+}
+
+.parent {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+}
+
+.prof1 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.prof2 {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.prof2-1 {
+    background-color: white;
+    border-radius: 1rem;
+    width: 50%;
+    height: 50%;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    margin: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+}
+
+.det{
+    font-size: 1.25 rem;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    margin: 10px;
+}
+
+.prof1 img{
+    border-radius: 50%;
+    width: 350px;
+    height: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+}
+
+.bottom {
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+    border-radius: 1rem;
+    width: 80%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    margin: 20px;
+}
+
+.extra {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.retrieved-data {
+    font-weight: normal; 
+}
+
+.heading {
+    display: flex;
+    justify-content: center;
+    color: white;
+    text-shadow:2px 2px 8px #000000;
+    font-size: 1.5rem;
+}
+
+.go-back {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.go-back button {
+    background-color: #f02929; 
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px;
+}
+
+.go-back button:hover {
+    background-color: #ff0000; 
+}
+
+.cont {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 10px;
+}
+
+

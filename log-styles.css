@@ -1,0 +1,106 @@
+
+    body {
+        font-family: 'Poppins', sans-serif;
+        background-image: url('log-back.webp');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center; 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+    }
+
+    .login-container {
+      background-color: white;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+      width: 350px;
+      text-align: center;
+    }
+    h1 {
+      font-size: 24px;
+      margin-bottom: 20px;
+      color: #333;
+    }
+    .login-container label {
+      text-align: left;
+      display: block;
+      font-size: 14px;
+      margin-bottom: 6px;
+    }
+    .login-container input[type="text"], 
+    .login-container input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 14px;
+    }
+    .login-container button {
+      width: 100%;
+      padding: 12px;
+      background-color: #28a745;
+      border: none;
+      color: white;
+      border-radius: 4px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    .login-container button:hover {
+      background-color: #218838;
+    }
+    .separator {
+      display: flex;
+      align-items: center;
+      margin: 20px 0;
+    }
+    .separator::before, .separator::after {
+      content: '';
+      flex: 1;
+      border-bottom: 1px solid #ccc;
+    }
+    .separator p {
+      margin: 0 10px;
+      font-size: 14px;
+      color: #666;
+    }
+    .google-btn {
+      display: inline-block;
+      width: 100%;
+      background-color: #4285F4;
+      color: white;
+      text-align: center;
+      padding: 12px;
+      border-radius: 4px;
+      font-size: 16px;
+      cursor: pointer;
+      text-decoration: none;
+    }
+    .google-btn img {
+      vertical-align: middle;
+      margin-right: 8px;
+    }
+
+    .register-section {
+      margin-top: 20px;
+      text-align: center;
+    }
+  
+    .register-section p {
+        font-size: 14px;
+        color: #555;
+    }
+    
+    .register-section a {
+        color: #007bff;
+        text-decoration: none;
+    }
+    
+    .register-section a:hover {
+        text-decoration: underline;
+    }
+    

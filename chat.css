@@ -1,0 +1,119 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; 
+    background-image: url('chat-back.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.navbar {
+    display: flex;
+    justify-content: flex-end; 
+    padding: 10px 20px; 
+    background-color: #007e0d;
+    color: white; 
+}
+.profile-toggle {
+    display: flex; 
+    align-items: center; 
+    cursor: pointer; 
+}
+.profile-toggle img {
+    width: 40px; 
+    height: 40px; 
+    border-radius: 50%; 
+    margin-right: 10px; 
+}
+.profile-menu {
+    display: none; 
+    position: absolute; 
+    top: 50px; 
+    right: 20px; 
+    background: white; 
+    border: 1px solid #bbffb6; 
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    z-index: 1000; 
+}
+.profile-menu.active {
+    display: block; 
+}
+.profile-menu a {
+    display: block;
+    padding: 10px; 
+    color: #333; 
+    text-decoration: none; 
+}
+.profile-menu a:hover {
+    background: #f1f1f1; 
+}
+.chat-container {
+    width: 100%;
+    max-width: 600px; 
+    margin: 20px auto; 
+    border: 1px solid #ccc;
+    border-radius: 8px; 
+    background: white; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    display: flex;
+    flex-direction: column;
+}
+.chat-header {
+    padding: 10px;
+    background: #009500;
+    color: white; 
+    display: flex; 
+    align-items: center; 
+    border-top-left-radius: 8px; 
+    border-top-right-radius: 8px; 
+}
+.chat-header img {
+    width: 40px; /* Profile picture size */
+    height: 40px; /* Profile picture size */
+    border-radius: 50%; /* Round profile picture */
+    margin-right: 10px; /* Space between image and name */
+}
+.chat-messages {
+    flex: 1; /* Take remaining space */
+    padding: 10px;
+    overflow-y: auto; /* Scrollable area for messages */
+    max-height: 400px; /* Maximum height for messages */
+}
+.message {
+    margin: 5px 0; /* Margin between messages */
+    padding: 10px;
+    border-radius: 5px; /* Rounded corners for messages */
+}
+.message.sent {
+    background: #e1ffc7; /* Light green for sent messages */
+    align-self: flex-end; /* Align sent messages to the right */
+}
+.message.received {
+    background: #f1f1f1; /* Light grey for received messages */
+    align-self: flex-start; /* Align received messages to the left */
+}
+.message-input {
+    display: flex; /* Flexbox for input area */
+    padding: 10px;
+    border-top: 1px solid #ccc; /* Top border */
+}
+.message-input input {
+    flex: 1; /* Take remaining space */
+    padding: 10px;
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    margin-right: 10px; /* Space between input and button */
+}
+.message-input button {
+    background: #007bff; /* Button color */
+    color: white; /* Button text color */
+    border: none; /* No border */
+    padding: 10px 15px; /* Padding */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor */
+    transition: background-color 0.3s; /* Smooth transition */
+}
+.message-input button:hover {
+    background: #0056b3; /* Darker blue on hover */
+}
